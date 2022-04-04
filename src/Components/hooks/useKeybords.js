@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 
 const useKeybords = ()=>{
-    const [keybords,setKeybords] = useState();
+    const [keybords,setKeybords] = useState([]);
     useEffect( () =>{
-        fetch('comming-soon by my friend')
+        fetch('mydata.json')
         .then(res =>res.json())
         .then(data =>setKeybords(data))
     },[])

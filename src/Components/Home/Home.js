@@ -1,12 +1,17 @@
 import React from "react";
+import { CardGroup } from "react-bootstrap";
+import useKeybords from "../hooks/useKeybords";
 import img from "../Image/leftHeader.jpg";
+import Keybord from "../Keybord/Keybord";
 import "./Home.css";
 
 const Home = () => {
+  const [keybords,setKeybords] =useKeybords([]);
   return (
     <section>
       <div className="row">
-        <div className="col-md-6 home-h1">
+        <div className="col-md-6 ">
+          <div className="home-h1">
           <h1>Review Our Product</h1>
           <p>
             A keyboard is for putting information including letters, words and
@@ -15,11 +20,17 @@ const Home = () => {
             keyboard are also found on the right of the keyboard. The letter
             keys are in the centre of the keyboard.
           </p>
+          </div>
         </div>
         <div className="col-md-6">
           <img className="rounded" src={img} alt="" />
         </div>
       </div>
+      <CardGroup>
+        {
+          keybords.slice(0,3).map(keybordOne => <Keybord key={keybordOne.id} keybordOne={keybordOne}></Keybord>)
+        }
+      </CardGroup>
     </section>
   );
 };
