@@ -9,9 +9,9 @@ const Home = () => {
   const [keybords,setKeybords] =useKeybords([]);
   return (
     <section>
-      <div className="row">
+      <div className="row bg-secondary ">
         <div className="col-md-6 ">
-          <div className="home-h1">
+          <div className="home-h1 text-light">
           <h1>Review Our Product</h1>
           <p>
             A keyboard is for putting information including letters, words and
@@ -23,7 +23,7 @@ const Home = () => {
           </div>
         </div>
         <div className="col-md-6">
-          <img className="rounded" src={img} alt="" />
+          <img className="rounded w-75 my-4" src={img} alt="" />
         </div>
       </div>
       <CardGroup className="p-5 ">
