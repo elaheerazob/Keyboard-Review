@@ -5,8 +5,8 @@ import { Card } from "react-bootstrap";
 const Keybord = ({keybordOne}) => {
     const {name,review,img} = keybordOne;
   return (
-    <Card>
-      <Card.Img variant="top" src={img} />
+    <Card className="bg-info m-3">
+      <Card.Img className="w-50 mx-auto rounded mt-2" variant="top" src={img} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>

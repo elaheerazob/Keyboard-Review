@@ -26,7 +26,7 @@ const Home = () => {
           <img className="rounded" src={img} alt="" />
         </div>
       </div>
-      <CardGroup>
+      <CardGroup className="p-5 ">
         {
           keybords.slice(0,3).map(keybordOne => <Keybord key={keybordOne.id} keybordOne={keybordOne}></Keybord>)
         }

@@ -6,7 +6,7 @@ import Keybord from "../Keybord/Keybord";
 const Review = () => {
   const [keybords, setKeybords] = useKeybords([]);
   return (
-    <CardGroup>
+    <CardGroup className="mt-3 p-4">
       {
           keybords.map(keybordOne => <Keybord key={keybordOne.id} keybordOne={keybordOne}></Keybord>)
       }
